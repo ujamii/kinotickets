@@ -2,6 +2,7 @@
   "name": "ujamii/kinotickets",
   "description": "XML parser for kinotickets.net data.",
   "type": "library",
+  "license": "MIT",
   "require": {
     "jms/serializer": "^3.17",
     "ext-simplexml": "*",
