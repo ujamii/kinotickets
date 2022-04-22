@@ -1,0 +1,15 @@
+{
+  "name": "ujamii/kinotickets",
+  "description": "XML parser for kinotickets.net data.",
+  "type": "library",
+  "require": {
+    "jms/serializer": "^3.17",
+    "ext-simplexml": "*",
+    "ext-dom": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ujamii\\Kinotickets\\": "src/"
+    }
+  }
+}
