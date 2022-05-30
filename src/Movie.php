@@ -60,14 +60,14 @@ class Movie
 
     /**
      * @Serializer\XmlElement
-     * @Serializer\Type("DateTime<'d.m.Y'>")
+     * @Serializer\Type("DateTime<'d.m.Y H:i'>")
      * @Serializer\SerializedName("veroeffentlichen_ab")
      */
     protected ?\DateTime $publishDate = null;
 
     /**
      * @Serializer\XmlElement
-     * @Serializer\Type("DateTime<'d.m.Y'>")
+     * @Serializer\Type("DateTime<'d.m.Y H:i'>")
      * @Serializer\SerializedName("verkaufsstart_ab")
      */
     protected ?\DateTime $sellingStartDate = null;
