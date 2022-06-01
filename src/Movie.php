@@ -96,6 +96,13 @@ class Movie
     /**
      * @Serializer\XmlElement
      * @Serializer\Type("int")
+     * @Serializer\SerializedName("edifilmnr")
+     */
+    protected int $ediFilmNr = 0;
+
+    /**
+     * @Serializer\XmlElement
+     * @Serializer\Type("int")
      * @Serializer\SerializedName("film_id")
      */
     protected int $movieId = 0;
@@ -322,6 +329,14 @@ class Movie
     public function getProductionYear(): int
     {
         return $this->productionYear;
+    }
+
+    /**
+     * @return int
+     */
+    public function getEdiFilmNr(): int
+    {
+        return $this->ediFilmNr;
     }
 
 }
