@@ -53,6 +53,20 @@ class Movie
 
     /**
      * @Serializer\XmlElement
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("produktion")
+     */
+    protected string $productionCountry = '';
+
+    /**
+     * @Serializer\XmlElement
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("darsteller")
+     */
+    protected string $actorsList = '';
+
+    /**
+     * @Serializer\XmlElement
      * @Serializer\Type("DateTime<'d.m.Y'>")
      * @Serializer\SerializedName("datumab")
      */
@@ -99,6 +113,13 @@ class Movie
      * @Serializer\SerializedName("fsk")
      */
     protected int $fsk = 0;
+
+    /**
+     * @Serializer\XmlElement
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("prodjahr")
+     */
+    protected int $productionYear = 0;
 
     /**
      * @Serializer\XmlElement
@@ -277,6 +298,30 @@ class Movie
     public function getOverlength(): int
     {
         return $this->overlength;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductionCountry(): string
+    {
+        return $this->productionCountry;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActorsList(): string
+    {
+        return $this->actorsList;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProductionYear(): int
+    {
+        return $this->productionYear;
     }
 
 }
