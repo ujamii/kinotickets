@@ -67,6 +67,20 @@ class Movie
 
     /**
      * @Serializer\XmlElement
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("reihe_nr")
+     */
+    protected string $internalCategoryId = '';
+
+    /**
+     * @Serializer\XmlElement
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("reihe_hint")
+     */
+    protected string $internalCategoryName = '';
+
+    /**
+     * @Serializer\XmlElement
      * @Serializer\Type("DateTime<'d.m.Y'>")
      * @Serializer\SerializedName("datumab")
      */
@@ -337,6 +351,22 @@ class Movie
     public function getEdiFilmNr(): int
     {
         return $this->ediFilmNr;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternalCategoryId(): string
+    {
+        return $this->internalCategoryId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternalCategoryName(): string
+    {
+        return $this->internalCategoryName;
     }
 
 }
