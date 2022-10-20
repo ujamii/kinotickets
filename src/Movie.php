@@ -178,6 +178,13 @@ class Movie
     protected int $overlength = 0;
 
     /**
+     * @Serializer\XmlElement
+     * @Serializer\SerializedName("deovomu")
+     * @Serializer\Type("string")
+     */
+    protected string $languageIdentifier = '';
+
+    /**
      * @return string
      */
     public function getTitle(): string
@@ -367,6 +374,14 @@ class Movie
     public function getInternalCategoryName(): string
     {
         return $this->internalCategoryName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguageIdentifier(): string
+    {
+        return $this->languageIdentifier;
     }
 
 }
